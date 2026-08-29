@@ -2,7 +2,7 @@
 
 **Communication made simple.** Messages, channels, and voice & video calls for your team — in one app, built and hosted in Europe, open source and self-hostable.
 
-[margin.chat](https://margin.chat) · [Download](https://margin.chat/download) · [Open in browser](https://margin.chat) · [App Store](https://apps.apple.com/app/margin-messenger/id6790111555)
+[margin.chat](https://margin.chat) · [Download](https://margin.chat/download) · [Open in browser](https://margin.chat/app) · [App Store](https://apps.apple.com/app/margin-messenger/id6790111555)
 
 ---
 
