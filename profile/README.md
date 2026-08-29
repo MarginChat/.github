@@ -25,8 +25,6 @@ Most team chat tools try to do everything. margin does less, on purpose — the 
 | [margin-server](https://github.com/Margin-Chat/margin-server) | Java 25, Spring Boot 4, PostgreSQL, Flyway | REST API, WebSocket signaling, auth, persistence |
 | [margin-desktop](https://github.com/Margin-Chat/margin-desktop) | Electron, Vite, Svelte 5, TypeScript | The primary client — desktop app and web build |
 
-The rest of the platform — the mobile client, the group-call SFU, the marketing site, and the deployment manifests — is being opened up repository by repository as each one is ready.
-
 ## How the pieces fit
 
 ```
