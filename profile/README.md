@@ -16,7 +16,7 @@ Most team chat tools try to do everything. margin does less, on purpose — the 
 - **Optional Secret mode** — end-to-end encrypted private *and* group chats. Messages are stored encrypted on the server; your private key is encrypted with your password before it ever leaves your device.
 - **Voice and video** — 1:1 calls go peer-to-peer, group calls are routed through our own SFU.
 - **European by default** — hosted on Hetzner in Europe. Not AWS, not Azure, not Google Cloud.
-- **Yours to run** — a single Docker Compose file if you'd rather host it yourself.
+- **Yours to run** — self-hostable on your own infrastructure, not just ours.
 
 ## Repositories
 
@@ -24,11 +24,8 @@ Most team chat tools try to do everything. margin does less, on purpose — the 
 |---|---|---|
 | [margin-server](https://github.com/Margin-Chat/margin-server) | Java 25, Spring Boot 4, PostgreSQL, Flyway | REST API, WebSocket signaling, auth, persistence |
 | [margin-desktop](https://github.com/Margin-Chat/margin-desktop) | Electron, Vite, Svelte 5, TypeScript | The primary client — desktop app and web build |
-| [margin-mobile](https://github.com/Margin-Chat/margin-mobile) | Kotlin Multiplatform, Compose, SwiftUI | Android/iOS client — native UI, shared Kotlin networking and state |
-| [margin-sfu](https://github.com/Margin-Chat/margin-sfu) | Node.js, TypeScript, mediasoup | Selective Forwarding Unit for group voice/video |
-| [margin-landing](https://github.com/Margin-Chat/margin-landing) | SvelteKit | Marketing site, sign-up and activation |
 
-`margin-deploy` holds the production Docker Compose and nginx manifests and currently lives on [Codeberg](https://codeberg.org/margin).
+The rest of the platform — the mobile client, the group-call SFU, the marketing site, and the deployment manifests — is being opened up repository by repository as each one is ready.
 
 ## How the pieces fit
 
@@ -55,18 +52,11 @@ The domain words are specific, and worth knowing before reading the code:
 
 ## Self-hosting
 
-Self-hosting is supported exactly as well as the hosted version:
-
-```bash
-git clone <margin-deploy>
-cd margin-deploy
-cp env.example .env   # then edit
-docker compose up -d
-```
+margin runs on your own infrastructure as well as it runs on ours — the server is a single Spring Boot service in front of PostgreSQL. See the [margin-server README](https://github.com/Margin-Chat/margin-server) to build and run it; the production Docker Compose and nginx manifests will follow when that repository goes public.
 
 ## Contributing
 
-Issues and pull requests are welcome on any repository. Plenty of ways to help don't involve writing code — bug reports, docs, and translations all count. Please search existing issues before opening a new one.
+Issues and pull requests are welcome on any public repository. Plenty of ways to help don't involve writing code — bug reports, docs, and translations all count. Please search existing issues before opening a new one.
 
 ## License
 
